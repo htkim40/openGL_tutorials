@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../Mesh.cpp \
 ../Shader.cpp \
 ../Texture.cpp \
+../Transform.cpp \
 ../main.cpp 
 
 C_SRCS += \
@@ -18,6 +19,7 @@ OBJS += \
 ./Mesh.o \
 ./Shader.o \
 ./Texture.o \
+./Transform.o \
 ./main.o \
 ./stb_image.o 
 
@@ -26,6 +28,7 @@ CPP_DEPS += \
 ./Mesh.d \
 ./Shader.d \
 ./Texture.d \
+./Transform.d \
 ./main.d 
 
 C_DEPS += \
