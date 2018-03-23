@@ -21,10 +21,12 @@ Shader::Shader(const std::string& filename)
 	for(unsigned int i = 0; i <NUM_SHADERS; i++)
 	{
 		glAttachShader(m_program, m_shaders[i]);
-		std::cout<<"shader "<<i<<" has been attached"<<std::endl;
+//		std::cout<<"shader "<<i<<" has been attached"<<std::endl;
 	}
 
 	glBindAttribLocation(m_program,0,"position");
+//	glBindAttribLocation(m_program,1,"texCoord");
+
 
 	glLinkProgram(m_program);
 	CheckShaderError(m_program,GL_LINK_STATUS,true,"Error: Program linking failed: ");
@@ -38,7 +40,7 @@ Shader::~Shader() {
 	{
 		glDetachShader(m_program,m_shaders[i]);
 		glDeleteShader(m_shaders[i]);
-		std::cout<<"shader "<<i<<" has been dettached and deleted"<<std::endl;
+//		std::cout<<"shader "<<i<<" has been dettached and deleted"<<std::endl;
 	}
 	glDeleteProgram(m_program);
 }
